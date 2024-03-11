@@ -1,0 +1,22 @@
+
+
+<!-- Jquery CDN -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> -->
+<!-- <script src='script.js'></script> -->
+<script src="../../script/script.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../../service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered');
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+
+</html>
